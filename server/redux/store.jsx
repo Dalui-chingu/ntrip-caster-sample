@@ -3,7 +3,7 @@ import userReducer from './userSlice'
 
 const store = configureStore({
     reducer: {
-        basestations: userReducer
+        connectedUsers: userReducer
     }
 })
 export default store;

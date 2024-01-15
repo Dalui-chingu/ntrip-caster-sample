@@ -1,19 +1,24 @@
-// App.js
 
-import React from 'react';
-import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
-import Login from './Login';
-import Dash from './dash';
-const App = () => {
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import logo from './logo.svg';
+import Dashboard from './Pages/Dashboard';
+import Login from './components/Auth/Login';
+import SignUp from './components/Auth/Signup';
+
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login/>} />
-        
-        <Route path="/dash" element={<Dash/>} /> 
-      </Routes>
-    </Router>
+    <div className="App">
+     <BrowserRouter>
+     <Routes>
+      <Route exact path='/' element={<Login/>}/>
+      <Route exact path='/signup' element={<SignUp/>}/>
+      <Route exact path='/dash' element={<Dashboard/>} />
+     </Routes>
+     </BrowserRouter>
+    </div>
   );
-};
+}
 
 export default App;

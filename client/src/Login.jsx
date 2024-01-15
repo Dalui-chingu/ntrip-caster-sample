@@ -21,7 +21,7 @@ const Login = () => {
 
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-<Link to={'/dash'}><button type="submit">Login</button></Link>
+<Link to={'/dashboard'}><button type="submit">Login</button></Link>
         
       </form>
     </div>
